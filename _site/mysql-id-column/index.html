@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="/Blog/assets/images/darkmodeparrot.gif">
+
+    <title>[mysql] MySQL id컬럼의 data type (INT vs BIGINT) | isthis's blog</title>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>[mysql] MySQL id컬럼의 data type (INT vs BIGINT) | isthis’s blog</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="[mysql] MySQL id컬럼의 data type (INT vs BIGINT)" />
+<meta name="author" content="isthis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="MySQL id컬럼의 data type에 대하여" />
+<meta property="og:description" content="MySQL id컬럼의 data type에 대하여" />
+<link rel="canonical" href="http://localhost:4000/Blog/mysql-id-column/" />
+<meta property="og:url" content="http://localhost:4000/Blog/mysql-id-column/" />
+<meta property="og:site_name" content="isthis’s blog" />
+<meta property="og:image" content="http://localhost:4000/Blog/assets/images/13.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-04T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/Blog/assets/images/13.jpg" />
+<meta property="twitter:title" content="[mysql] MySQL id컬럼의 data type (INT vs BIGINT)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"isthis"},"dateModified":"2023-01-04T00:00:00+09:00","datePublished":"2023-01-04T00:00:00+09:00","description":"MySQL id컬럼의 data type에 대하여","headline":"[mysql] MySQL id컬럼의 data type (INT vs BIGINT)","image":"http://localhost:4000/Blog/assets/images/13.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Blog/mysql-id-column/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/Blog/assets/images/darkmodeparrot.gif"},"name":"isthis"},"url":"http://localhost:4000/Blog/mysql-id-column/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="/Blog/assets/css/screen.css" rel="stylesheet">
+
+    <link href="/Blog/assets/css/main.css" rel="stylesheet">
+
+    <script src="/Blog/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+
+<body class="layout-post">
+    <!-- defer loading of font and font awesome -->
+    <noscript id="deferred-styles">
+        <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </noscript>
+
+
+    <!-- Begin Menu Navigation
+================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+        <div class="container pr-0">
+
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="/Blog/">
+                <img src="/Blog/assets/images/darkmodeparrot.gif" alt="isthis's blog">
+            </a>
+            <!-- End Logo -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+
+                <!-- Begin Menu -->
+
+                <ul class="navbar-nav ml-auto">
+
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="/Blog/index.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Blog/about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Blog/contact"><i class="fa fa-envelope"></i>
+                            Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link" href="https://github.com/IsthisLee"><i
+                                class="fab fa-github"></i>
+                            Github</a>
+                    </li>
+
+                    <script src="/Blog/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/Blog/assets/js/lunrsearchengine.js"></script>
+
+                </ul>
+
+                <!-- End Menu -->
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navigation
+================================================== -->
+
+    <div class="site-content">
+
+        <div class="container">
+
+            <!-- Site Title
+================================================== -->
+            <div class="mainheading">
+                <a href="/" style="color: black">
+                    <h1 class="sitetitle">isthis's blog</h1>
+                </a>
+                <p class="lead">
+                    이슈, 공부한 내용을 정리하는 블로그입니다.
+                </p>
+            </div>
+
+            <!-- Content
+================================================== -->
+            <div class="main-content">
+                <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=[mysql] MySQL id컬럼의 data type (INT vs BIGINT)&url=http://localhost:4000/Blog/mysql-id-column/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/Blog/mysql-id-column/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/Blog/mysql-id-column/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb"
+                            src="https://www.gravatar.com/avatar/b3007b17990548abf8b6d7e0dd7d5294?s=250&d=mm&r=x"
+                            alt="이건희">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="https://github.com/IsthisLee">이건희</a><a
+                            target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description">안녕하세요. 초보 개발자입니다. 이슈 및 공부한 내용을 정리하고 있습니다. 피드백 환영합니다 :)</span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">[mysql] MySQL id컬럼의 data type (INT vs BIGINT)</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/Blog/assets/images/13.jpg" alt="[mysql] MySQL id컬럼의 data type (INT vs BIGINT)">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                
+                <div class="toc mt-4 mb-4 lead">
+                    <h3 class="font-weight-bold">Summary</h3>
+                    <ul>
+  <li><a href="#1-상황">1. 상황</a></li>
+  <li><a href="#2-원인">2. 원인</a></li>
+  <li><a href="#3-개념">3. 개념</a></li>
+  <li><a href="#4-정리">4. 정리</a></li>
+</ul>
+                </div>
+                
+                <!-- End Toc -->
+                <p>MySQL id컬럼의 data type에 대하여</p>
+
+<h2 id="1-상황">1. 상황</h2>
+
+<p>ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데, BIGINT 타입으로 변경했더니 많은 에러가 발생함.<br />
+(변경 이유는 생략)</p>
+
+<h2 id="2-원인">2. 원인</h2>
+
+<p>BIGINT는 INT와 달리 Number type이 아닌 별도의 타입(bigint)을 사용함.<br />
+전부 Number type으로 개발되어 있고, 비지니스 로직에서 계속해서 분리하여 사용해야 하는 번거로움이 발생<br />
+따라서, BIGINT가 아닌 INT를 사용하여 번거로움을 줄이고자 INT와 BIGINT의 차이를 확인함.</p>
+
+<h2 id="3-개념">3. 개념</h2>
+
+<ul>
+  <li>
+    <p>INT / BIGINT 특징</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Maximum Value Signed</th>
+          <th>Minimum Value Signed</th>
+          <th>Maximum Value Unsigned</th>
+          <th>Minimum Value Unsigned</th>
+          <th>Storage(Bytes)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INT</td>
+          <td>2147483647 (약 21억)</td>
+          <td>-2147483648 (약 -21억)</td>
+          <td>4294967295 (약 43억)</td>
+          <td>0</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BIGINT</td>
+          <td>약 922경</td>
+          <td>약 -922경</td>
+          <td>0</td>
+          <td>약 1844경</td>
+          <td>8</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>(INT, BIGINT 외의 타입에 대한 특징은 맨 아래 참고 사이트 참고)</p>
+  </li>
+  <li>
+    <p>id 컬럼에 적용 시 고려할 사항</p>
+    <ul>
+      <li>BIGINT 사용 시, TypeScript에서 Number Type이 아닌, BIGINT Type을 사용해야 함.
+        <ul>
+          <li>비지니스 로직에서 Number와 BIGINT 타입으로 분리하여 사용해야 하는 번거로움 발생</li>
+        </ul>
+      </li>
+      <li>id 값이 43억을 넘어가는 아주 큰 DB라면 무조건 BIGINT를 사용</li>
+      <li>43억이 넘지 않다면, 가능한 작은 타입을 선택하는 것이 속도 측면에서 조금 더 유리해 보임</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="4-정리">4. 정리</h2>
+
+<p>컬럼 수가 43억개 이상 넘어갈 정도로 큰 서비스 규모가 아니고, 속도 차이와 type 지정의 번거로움을 줄이기 위해 INT 데이터타입을 사용하기로 하였다.</p>
+
+<p>피드백 환영합니다 :)</p>
+
+<blockquote>
+  <p>참고자료</p>
+
+  <p><a href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html">MySQL 공식문서</a></p>
+</blockquote>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+                <small>
+                    <span class="post-date"><time class="post-date" datetime=" 2023-01-04">04 Jan 2023</time></span>
+                    
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/Blog/categories#db">db</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/Blog/tags#db">#db</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/Blog/tags#mysql">#mysql</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                
+                <a class="prev d-block col-md-6" href="/Blog//powerful-things-markdown-editor/"> &laquo;
+                    Powerful things you can do with the Markdown editor</a>
+                
+                
+                <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'isthis'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+        </div>
+    </div>
+</div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+<script>
+    $(window).on("load resize ", function () {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({ 'padding-right': scrollWidth });
+    }).resize();
+</script>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Categories Jumbotron
+================================================== -->
+        <div class="jumbotron fortags">
+            <div class="d-md-flex h-100">
+                <div class="col-md-4 transpdark align-self-center text-center h-100">
+                    <div class="d-md-flex align-items-center justify-content-center h-100">
+                        <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span
+                                class="d-none d-md-inline">→</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-8 p-5 align-self-center text-center">
+                    
+                    
+                    
+                    <a class="mt-1 mb-1"
+                        href="/Blog/categories#db">db (1)</a>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin Footer
+================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        Copyright © 2023 isthis's blog
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer
+================================================== -->
+
+    </div> <!-- /.site-content -->
+
+    <!-- Scripts
+================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="/Blog/assets/js/mediumish.js"></script>
+
+    
+
+    <script src="/Blog/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+    <script id="dsq-count-scr" src="//isthis.disqus.com/count.js"></script>
+    
+
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+    <script>
+        /* paste this line in verbatim */
+        window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+        /* customize formbutton below*/
+        formbutton("create", {
+            action: "https://formspree.io/f/mdovkkpr",
+            title: "이메일로 연락하기",
+            fields: [
+                {
+                    type: "text",
+                    label: "Name:",
+                    name: "name",
+                    required: true,
+                    placeholder: "Your Name"
+                },
+                {
+                    type: "email",
+                    label: "Email:",
+                    name: "email",
+                    required: true,
+                    placeholder: "your@email.com"
+                },
+                {
+                    type: "textarea",
+                    label: "Message:",
+                    name: "message",
+                    placeholder: "내용을 입력해주세요.",
+                },
+                {
+                    type: "submit"
+                }
+            ],
+            styles: {
+                title: {
+                    backgroundColor: "#3c6ec5"
+                },
+                button: {
+                    backgroundColor: "#3c6ec5"
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
