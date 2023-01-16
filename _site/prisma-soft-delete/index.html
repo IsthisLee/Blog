@@ -255,30 +255,24 @@
                 <div class="toc mt-4 mb-4 lead">
                     <h3 class="font-weight-bold">Summary</h3>
                     <ul>
-  <li><a href="#prisma-soft-delete-적용">[prisma] soft delete 적용</a>
+  <li><a href="#1-상황-및-원인">1. 상황 및 원인</a>
     <ul>
-      <li><a href="#1-상황-및-원인">1. 상황 및 원인</a>
-        <ul>
-          <li><a href="#그럼에도-prisma를-사용하고-있는-이유">그럼에도 Prisma를 사용하고 있는 이유</a></li>
-          <li><a href="#prisma-soft-delete-적용-이유">Prisma Soft Delete 적용 이유</a></li>
-        </ul>
-      </li>
-      <li><a href="#2-방안">2. 방안</a>
-        <ul>
-          <li><a href="#2-1-prisma-middleware-구현">2-1. prisma Middleware 구현</a></li>
-          <li><a href="#2-2-위-방식의-문제점">2-2. 위 방식의 문제점</a></li>
-          <li><a href="#3-정리">3. 정리</a></li>
-        </ul>
-      </li>
+      <li><a href="#그럼에도-prisma를-사용하고-있는-이유">그럼에도 Prisma를 사용하고 있는 이유</a></li>
+      <li><a href="#prisma-soft-delete-적용-이유">Prisma Soft Delete 적용 이유</a></li>
     </ul>
   </li>
+  <li><a href="#2-방안">2. 방안</a>
+    <ul>
+      <li><a href="#2-1-prisma-middleware-구현">2-1. prisma Middleware 구현</a></li>
+      <li><a href="#2-2-위-방식의-문제점">2-2. 위 방식의 문제점</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-정리">3. 정리</a></li>
 </ul>
                 </div>
                 
                 <!-- End Toc -->
                 <p>prisma soft delete 적용하기</p>
-
-<h1 id="prisma-soft-delete-적용">[prisma] soft delete 적용</h1>
 
 <h2 id="1-상황-및-원인">1. 상황 및 원인</h2>
 
@@ -377,7 +371,7 @@ soft delete의 세부 동작은 삭제 동작 시, delete 관련 coulmn을 updat
 
 <p>2번의 경우, 미들웨어를 사용하지 않더라도 발생하는 문제이기에 위 방식만의 문제라고는 볼 수 없다.</p>
 
-<h3 id="3-정리">3. 정리</h3>
+<h2 id="3-정리">3. 정리</h2>
 
 <p>1번 문제의 경우를 잘 생각하여 미들웨어를 통해 자동으로 변환할지 잘 판단하여 적용해야 할 것 같다.</p>
 
@@ -445,7 +439,7 @@ soft delete의 세부 동작은 삭제 동작 시, delete 관련 coulmn을 updat
                 
                 
                 <a class="next d-block col-md-6 text-lg-right"
-                    href="//git-the-requested-url-returned-error-403/">[Git] git the requested URL returend error : 403 해결 &raquo; </a>
+                    href="/git-the-requested-url-returned-error-403/">[Git] git the requested URL returend error : 403 해결 &raquo; </a>
                 
                 <div class="clearfix"></div>
             </div>
