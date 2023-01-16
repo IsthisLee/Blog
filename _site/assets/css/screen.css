@@ -29,7 +29,6 @@ a:hover {
 pre {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: #f98b7d 1px solid;
   width: 100%;
   padding: 7px;
   font-family: monospace, sans-serif;
@@ -1136,7 +1135,7 @@ iframe {
   width: 200px;
 }
 
-table {
+table:not(.rouge-table) {
   border: 1px #a196d2 solid;
   font-size: 0.9em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
@@ -1147,11 +1146,11 @@ table {
   margin-bottom: 20px;
 }
 
-th {
+table:not(.rouge-table) th {
   text-align: left;
 }
 
-thead {
+table:not(.rouge-table) thead {
   font-weight: bold;
   color: #fff;
   background: radial-gradient(
@@ -1173,32 +1172,32 @@ thead {
   box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
 }
 
-td,
-th {
+table:not(.rouge-table) td,
+table:not(.rouge-table) th {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1em 0.5em;
   vertical-align: middle;
 }
 
-td {
+table:not(.rouge-table) td {
   background: #fff;
 }
 
 @media all and (max-width: 768px) {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
+  table:not(.rouge-table),
+  table:not(.rouge-table) thead,
+  table:not(.rouge-table) tbody,
+  table:not(.rouge-table) th,
+  table:not(.rouge-table) td,
+  table:not(.rouge-table) tr {
     display: block;
   }
 
-  th {
+  table:not(.rouge-table) th {
     text-align: right;
   }
 
-  table {
+  table:not(.rouge-table) {
     position: relative;
     padding-bottom: 0;
     border: none;
@@ -1207,26 +1206,26 @@ td {
     overflow-y: hidden;
   }
 
-  thead {
+  table:not(.rouge-table) thead {
     float: left;
     white-space: nowrap;
   }
 
-  tbody {
+  table:not(.rouge-table) tbody {
     position: relative;
     white-space: nowrap;
   }
 
-  tr {
+  table:not(.rouge-table) tr {
     display: inline-block;
     vertical-align: top;
   }
 
-  th {
+  table:not(.rouge-table) th {
     border-bottom: 1px solid #a196d2;
   }
 
-  td {
+  table:not(.rouge-table) td {
     border-bottom: 1px solid #e5e5e5;
   }
 }

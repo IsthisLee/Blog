@@ -2,7 +2,7 @@
 layout: post
 title: "[mysql] MySQL id컬럼의 data type (INT vs BIGINT)"
 author: isthis
-categories: [db]
+categories: [issue, db]
 tags: [mysql, db]
 image: assets/images/13.jpg
 description: "MySQL id컬럼의 data type에 대하여"
@@ -32,12 +32,12 @@ BIGINT는 INT와 달리 Number type이 아닌 별도의 타입(bigint)을 사용
 
 - INT / BIGINT 특징
 
-  | Type   | Maximum Value Signed    | Minimum Value Signed      | Maximum Value Unsigned  | Minimum Value Unsigned | Storage(Bytes) |
-  | ------ | ----------------------- | ------------------------- | ----------------------- | ---------------------- | -------------- |
-  | INT    | 2,147,483,647 (약 21억) | -2,147,483,648 (약 -21억) | 4,294,967,295 (약 43억) | 0                      | 4              |
-  | BIGINT | 약 922경                | 약 -922경                 | 0                       | 약 1,844경             | 8              |
+| Type   | Maximum Value Signed    | Minimum Value Signed      | Maximum Value Unsigned  | Minimum Value Unsigned | Storage(Bytes) |
+| ------ | ----------------------- | ------------------------- | ----------------------- | ---------------------- | -------------- |
+| INT    | 2,147,483,647 (약 21억) | -2,147,483,648 (약 -21억) | 4,294,967,295 (약 43억) | 0                      | 4              |
+| BIGINT | 약 922경                | 약 -922경                 | 0                       | 약 1,844경             | 8              |
 
-  (INT, BIGINT 외의 타입에 대한 특징은 맨 아래 참고 사이트 참고)
+(INT, BIGINT 외의 타입에 대한 특징은 맨 아래 참고 사이트 참고)
 
 - id 컬럼에 적용 시 고려할 사항
   - BIGINT 사용 시, TypeScript에서 Number Type이 아닌, BIGINT Type을 사용해야 함.
