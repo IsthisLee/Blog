@@ -8,7 +8,8 @@ comments: true
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>안녕하세요 초보 백엔드 개발자 이건희입니다.</p>
+<p>안녕하세요 <br/>
+초보 백엔드 개발자 이건희입니다.</p>
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/darkmodeparrot.gif" alt="jekyll template mediumish" /></p>
 
 <h4>소개</h4>

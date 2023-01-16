@@ -17,8 +17,10 @@ MySQL id컬럼의 data type에 대하여
 
 ## 1. 상황
 
+<span class ='spoiler'>
 ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데, BIGINT 타입으로 변경했더니 많은 에러가 발생함.\
 (변경 이유는 생략)
+</span>
 
 ## 2. 원인
 

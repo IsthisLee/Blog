@@ -5,7 +5,7 @@ description: "이슈, 공부한 내용을 정리하는 블로그입니다."
 logo: "assets/images/darkmodeparrot.gif"
 favicon: "aassets/images/darkmodeparrot.gif"
 baseurl: ""
-google_analytics: "UA-46278016-1"
+google_analytics: "GTM-W4DFQ56"
 disqus: "isthis"
 include: ["_pages"]
 permalink: /:title/
@@ -17,8 +17,9 @@ authors:
     display_name: 이건희
     gravatar: b3007b17990548abf8b6d7e0dd7d5294
     email: rjsgmldnwn@gmail.com
-    web: https://github.com/IsthisLee
-    description: "안녕하세요. 초보 개발자입니다. 이슈 및 공부한 내용을 정리하고 있습니다. 피드백 환영합니다 :)"
+    web: https://isthislee.com
+    github: https://github.com/IsthisLee
+    description: "초보 개발자입니다. 이슈 및 공부한 내용을 정리하고 있습니다. 피드백 환영합니다 :)"
 
 # Plugins
 plugins:
@@ -37,7 +38,7 @@ jekyll-archives:
     category: "/category/:name/"
 
 # Pagination
-paginate: 9
+paginate: 6
 paginate_path: /page:num/
 
 # Other
