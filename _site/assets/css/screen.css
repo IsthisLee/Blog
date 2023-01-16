@@ -1203,6 +1203,8 @@ td {
     padding-bottom: 0;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   thead {
@@ -1211,8 +1213,6 @@ td {
   }
 
   tbody {
-    overflow-x: auto;
-    overflow-y: hidden;
     position: relative;
     white-space: nowrap;
   }

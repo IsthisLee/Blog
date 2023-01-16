@@ -5,7 +5,7 @@ description: "이슈, 공부한 내용을 정리하는 블로그입니다."
 logo: "assets/images/darkmodeparrot.gif"
 favicon: "aassets/images/darkmodeparrot.gif"
 baseurl: ""
-google_analytics: "GTM-W4DFQ56"
+google_tagmanager: "GTM-W4DFQ56"
 disqus: "isthis"
 include: ["_pages"]
 permalink: /:title/
@@ -53,8 +53,8 @@ kramdown:
 
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
 adsense: "disabled"
-adsense-data-ad-client: "ca-pub-3412143450191416"
-adsense-data-ad-slot: "1363087678"
+adsense-data-ad-client: "ca-pub-9923968903493294"
+adsense-data-ad-slot: "7185027430"
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"

@@ -5,8 +5,8 @@
     <description>이슈, 공부한 내용을 정리하는 블로그입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Jan 2023 17:22:11 +0900</pubDate>
-    <lastBuildDate>Mon, 16 Jan 2023 17:22:11 +0900</lastBuildDate>
+    <pubDate>Mon, 16 Jan 2023 19:04:52 +0900</pubDate>
+    <lastBuildDate>Mon, 16 Jan 2023 19:04:52 +0900</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -46,9 +46,9 @@ ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데,
       &lt;tbody&gt;
         &lt;tr&gt;
           &lt;td&gt;INT&lt;/td&gt;
-          &lt;td&gt;2147483647 (약 21억)&lt;/td&gt;
-          &lt;td&gt;-2147483648 (약 -21억)&lt;/td&gt;
-          &lt;td&gt;4294967295 (약 43억)&lt;/td&gt;
+          &lt;td&gt;2,147,483,647 (약 21억)&lt;/td&gt;
+          &lt;td&gt;-2,147,483,648 (약 -21억)&lt;/td&gt;
+          &lt;td&gt;4,294,967,295 (약 43억)&lt;/td&gt;
           &lt;td&gt;0&lt;/td&gt;
           &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
@@ -57,7 +57,7 @@ ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데,
           &lt;td&gt;약 922경&lt;/td&gt;
           &lt;td&gt;약 -922경&lt;/td&gt;
           &lt;td&gt;0&lt;/td&gt;
-          &lt;td&gt;약 1844경&lt;/td&gt;
+          &lt;td&gt;약 1,844경&lt;/td&gt;
           &lt;td&gt;8&lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
