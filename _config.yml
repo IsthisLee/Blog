@@ -4,7 +4,7 @@ title: "isthis's blog"
 description: "이슈, 공부한 내용을 정리하는 블로그입니다."
 logo: "assets/images/darkmodeparrot.gif"
 favicon: "aassets/images/darkmodeparrot.gif"
-baseurl: "/Blog"
+baseurl: ""
 google_analytics: "UA-46278016-1"
 disqus: "isthis"
 include: ["_pages"]
