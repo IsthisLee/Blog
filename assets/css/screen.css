@@ -1262,3 +1262,77 @@ table:not(.rouge-table) td {
     border-bottom: 1px solid #e5e5e5;
   }
 }
+
+#back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-linear-gradient(
+      190deg,
+      rgba(255, 0, 0, 0.5) 40px,
+      rgba(255, 153, 0, 0.5) 80px,
+      rgba(255, 255, 0, 0.5) 120px,
+      rgba(0, 255, 0, 0.5) 160px,
+      rgba(0, 0, 255, 0.5) 200px,
+      rgba(75, 0, 130, 0.5) 240px,
+      rgba(238, 130, 238, 0.5) 280px,
+      rgba(255, 0, 0, 0.5) 300px
+    ),
+    repeating-linear-gradient(
+      -190deg,
+      rgba(255, 0, 0, 0.5) 30px,
+      rgba(255, 153, 0, 0.5) 60px,
+      rgba(255, 255, 0, 0.5) 90px,
+      rgba(0, 255, 0, 0.5) 120px,
+      rgba(0, 0, 255, 0.5) 150px,
+      rgba(75, 0, 130, 0.5) 180px,
+      rgba(238, 130, 238, 0.5) 210px,
+      rgba(255, 0, 0, 0.5) 230px
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 70px;
+  right: 0px;
+  margin: 22px;
+  transition: background-color 0s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  box-shadow: rgb(255 255 255 / 50%) 0px 1px 2px 0px inset,
+    rgb(0 0 0 / 10%) 0px -4px 8px 0px inset,
+    rgb(22 22 22 / 50%) 0.3em 0.3em 1.4em;
+  /* visibility: hidden; */
+  z-index: 100000000;
+}
+#back-to-top::after {
+  content: "\f102";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#back-to-top:hover {
+  cursor: pointer;
+  background: #f98b7d;
+  background-color: #f98b7d;
+}
+#back-to-top:active {
+  background-color: rgb(252, 49, 49);
+}
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
