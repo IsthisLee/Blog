@@ -7,6 +7,8 @@
             <div class="col-12 col-lg-5 pr-lg-0">
                 <div class="wrapthumbnail">
                     <a href="{{ site.baseurl }}{{ post.url }}">
+                        {% if post.image %}
+
                         {% if site.lazyimages == "enabled" %}
                         <img class="featured-box-img-cover lazyimg"
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
@@ -14,7 +16,14 @@
                             post.image }}{% endif %}">
                         {% else %}
                         <img class="featured-box-img-cover" src="{% if post.image contains " ://" %}{{ post.image }}{%
-                            else %}{{ site.baseurl }}/{{ post.image }}{% endif %}">
+                            else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+                        {% endif %}
+
+                        {% else %}
+                        <img class="featured-box-img-cover"
+                            src="../assets/images/hand-drawn-watercolor-painting-winter-260nw-434024557.jpg"
+                            alt="{{ post.title }}">
+
                         {% endif %}
                     </a>
                 </div>
