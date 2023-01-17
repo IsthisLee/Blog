@@ -1,7 +1,8 @@
 # Site
-name: "isthis's blog"
-title: "isthis's blog"
-description: "이슈, 공부한 내용을 정리하는 블로그입니다."
+name: "isthisLee's blog"
+title: "isthisLee's tech blog(web 개발 블로그, javascript)"
+description: "isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다."
+home_description: "이슈, 공부한 내용을 정리하는 블로그입니다."
 logo: "assets/images/darkmodeparrot.gif"
 favicon: "aassets/images/darkmodeparrot.gif"
 baseurl: ""
@@ -38,7 +39,7 @@ jekyll-archives:
     category: "/category/:name/"
 
 # Pagination
-paginate: 6
+paginate: 3
 paginate_path: /page:num/
 
 # Other

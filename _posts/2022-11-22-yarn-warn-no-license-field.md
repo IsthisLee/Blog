@@ -2,14 +2,16 @@
 layout: post
 title: "[Yarn] yarn warning - No license field 해결"
 author: isthis
-categories: [issue, yarn, nestjs]
-tags: [yarn, error]
+categories: [개발, issue, package manager]
+tags: [yarn, issue, package manager]
 image: assets/images/yarn-warning-no-license.png
 description: "yarn warning - No license field 해결"
 toc: true
 featured: false
 hidden: false
 ---
+
+yarn warning - No license field 해결
 
 ### 1. 상황
 

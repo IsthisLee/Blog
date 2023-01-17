@@ -2,7 +2,7 @@
 layout: post
 title: "[MySQL] MySQL id컬럼의 data type (INT vs BIGINT)"
 author: isthis
-categories: [issue, db]
+categories: [개발, issue, db]
 tags: [mysql, db]
 image: assets/images/13.jpg
 description: "MySQL id컬럼의 data type에 대하여"

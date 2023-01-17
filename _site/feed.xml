@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>isthis&apos;s blog</title>
-    <description>이슈, 공부한 내용을 정리하는 블로그입니다.</description>
+    <title>isthisLee&apos;s tech blog(web 개발 블로그, javascript)</title>
+    <description>isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Jan 2023 02:24:14 +0900</pubDate>
-    <lastBuildDate>Tue, 17 Jan 2023 02:24:14 +0900</lastBuildDate>
+    <pubDate>Tue, 17 Jan 2023 18:30:53 +0900</pubDate>
+    <lastBuildDate>Tue, 17 Jan 2023 18:30:53 +0900</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -89,9 +89,11 @@ class-transformer에서 &lt;code class=&quot;language-plaintext highlighter-roug
         <category>typescript</category>
         
         
+        <category>개발</category>
+        
         <category>issue</category>
         
-        <category>nestjs</category>
+        <category>backend</category>
         
       </item>
     
@@ -186,6 +188,8 @@ ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데,
         <category>db</category>
         
         
+        <category>개발</category>
+        
         <category>issue</category>
         
         <category>db</category>
@@ -194,7 +198,9 @@ ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데,
     
       <item>
         <title>[Yarn] yarn warning - No license field 해결</title>
-        <description>&lt;h3 id=&quot;1-상황&quot;&gt;1. 상황&lt;/h3&gt;
+        <description>&lt;p&gt;yarn warning - No license field 해결&lt;/p&gt;
+
+&lt;h3 id=&quot;1-상황&quot;&gt;1. 상황&lt;/h3&gt;
 
 &lt;p&gt;yarn 명령어를 실행 중, 다음과 같은 warning message를 만났다.&lt;/p&gt;
 
@@ -233,14 +239,16 @@ ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데,
         
         <category>yarn</category>
         
-        <category>error</category>
+        <category>issue</category>
         
+        <category>package manager</category>
+        
+        
+        <category>개발</category>
         
         <category>issue</category>
         
-        <category>yarn</category>
-        
-        <category>nestjs</category>
+        <category>package manager</category>
         
       </item>
     
@@ -309,6 +317,10 @@ git push -u origin main
         
         <category>git</category>
         
+        <category>issue</category>
+        
+        
+        <category>개발</category>
         
         <category>issue</category>
         
@@ -437,12 +449,16 @@ soft delete의 세부 동작은 삭제 동작 시, delete 관련 coulmn을 updat
         
         <category>prisma</category>
         
-        <category>db</category>
+        <category>issue</category>
         
+        
+        <category>개발</category>
         
         <category>issue</category>
         
-        <category>prisma</category>
+        <category>backend</category>
+        
+        <category>db</category>
         
       </item>
     
