@@ -97,7 +97,7 @@
                     <li class="nav-item">
                         
                         <a class="nav-link" href="/categories"><i class="fas fa-book"></i>
-                            Category</a>
+                            Categories</a>
                     </li>
 
                     
@@ -110,7 +110,7 @@
                     
                     <li class="nav-item">
                         
-                        <a class="nav-link" href="/about"><i class="fas fa-user"></i> About</a>
+                        <a class="nav-link" href="/about"><i class="fas fa-user"></i> About Me</a>
                     </li>
 
                     
@@ -563,9 +563,10 @@ https://search.google.com/structured-data/testing-tool/u/0/
                     type: "submit"
                 }
             ],
+            buttonImg: "<i class='fas fa-comment' style='font-size:24px'/>",
+            stylesheet: "../assets/css/formbutton.css",
             styles: {
                 title: {
-
                     background: `repeating-linear-gradient(
                                 190deg,
                                 rgba(255, 0, 0, 0.5) 40px,
@@ -631,6 +632,11 @@ https://search.google.com/structured-data/testing-tool/u/0/
                 } else {
                     $('#back-to-top').removeClass('show');
                 }
+            });
+
+            // formbutton 클릭되면 스크롤 맨 위로 버튼 숨기기
+            $('#formbutton-button').on('click', function (e) {
+                $('#back-to-top').removeClass('show');
             });
         });
     </script>

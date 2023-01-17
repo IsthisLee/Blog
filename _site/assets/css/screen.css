@@ -1316,7 +1316,7 @@ table:not(.rouge-table) td {
   z-index: 100000000;
 }
 #back-to-top::after {
-  content: "\f102";
+  content: "\f062";
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
