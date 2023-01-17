@@ -5,8 +5,8 @@
     <description>isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Jan 2023 19:58:17 +0900</pubDate>
-    <lastBuildDate>Tue, 17 Jan 2023 19:58:17 +0900</lastBuildDate>
+    <pubDate>Wed, 18 Jan 2023 00:01:02 +0900</pubDate>
+    <lastBuildDate>Wed, 18 Jan 2023 00:01:02 +0900</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -248,7 +248,7 @@ ID컬럼이 INT 타입인 DB에 맞춰 typescript로 개발한 app이 있는데,
         
         <category>issue</category>
         
-        <category>package manager</category>
+        <category>package-manager</category>
         
       </item>
     
@@ -329,8 +329,8 @@ git push -u origin main
       </item>
     
       <item>
-        <title>[Prisma] prisma soft delete 적용하기</title>
-        <description>&lt;p&gt;prisma soft delete 적용하기&lt;/p&gt;
+        <title>[Prisma] prisma soft delete 적용하기sdfadfadfasdfsafsafsafsadfdsafdsfsfsaffdfdsfsdfdsㄹㄴㅁㅇㄹㄴㅁㅇㄹㅇㄴㄹㄹㄴㅁㅇㄹㄴㅁㄹㄴㄹㄴㅁㄹㄴㅇㄹㄴㄹㄴㄹㄴㄹㅁㄴㅇㄹㄴㅇㄹㄴㄹㅇㄴㅁㄹㄴㄹㄴㅇㄹㄴㅇㄹㄴㅁㄹㅇㄴㅁㄹㄴㅁㅇㄹㅇㄴ</title>
+        <description>&lt;p&gt;prisma soft delete 적용하기asdfsafsafsafsadfdsafdsfsfsaffdfdsfsdfdsㄹㄴㅁㅇㄹㄴㅁㅇㄹㅇㄴㄹㄹㄴㅁㅇㄹㄴㅁasdfsafsafsafsadfdsafdsfsfsaffdfdsfsdfdsㄹㄴㅁㅇㄹㄴㅁㅇㄹㅇㄴㄹㄹㄴㅁㅇㄹㄴㅁ&lt;/p&gt;
 
 &lt;h3 id=&quot;1-상황-및-원인&quot;&gt;1. 상황 및 원인&lt;/h3&gt;
 

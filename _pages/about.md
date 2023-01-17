@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About 이건희
+title: <i class="fas fa-user"></i> About 이건희
 permalink: /about
 comments: true
 ---
