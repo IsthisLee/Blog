@@ -1326,11 +1326,13 @@ table:not(.rouge-table) td {
 }
 #back-to-top:hover {
   cursor: pointer;
-  background: #f98b7d;
-  background-color: #f98b7d;
+  box-shadow: rgb(255 255 255 / 50%) 0px 1px 5px 0px inset,
+    rgb(0 0 0 / 10%) 0px -4px 10px 0px inset,
+    rgb(22 22 22 / 50%) 0.3em 0.3em 2em;
 }
 #back-to-top:active {
-  background-color: rgb(252, 49, 49);
+  background: #f59c90;
+  background-color: #f59c90;
 }
 #back-to-top.show {
   opacity: 1;
