@@ -109,7 +109,7 @@ post_class: post-template
 
             <div>
                 <div class="after-post-cats mb-4">
-                    <div class="d-flex flex-wrap tags">
+                    <div class="d-flex flex-wrap tags category">
                         {% assign sortedCategories = page.categories | sort %}
                         {% for category in sortedCategories %}
                         <a class="smoothscroll m-1" href="{{site.baseurl}}/categories#{{ category | replace: " "," -"
@@ -124,7 +124,7 @@ post_class: post-template
             <!-- Post Tags -->
             <div>
                 <div class="after-post-cats mb-4">
-                    <div class="d-flex flex-wrap tags">
+                    <div class="d-flex flex-wrap tags hashtag">
                         {% assign sortedTags = page.tags | sort %}
                         {% for tag in sortedTags %}
                         <a class="smoothscroll m-1" href="{{site.baseurl}}/tags#{{ tag | replace: " "," -" }}">#{{

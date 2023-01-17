@@ -363,11 +363,19 @@ span.post-read-more a:hover {
   font-family: Righteous;
   color: #ee6d38;
   opacity: 0.7;
-  animation: fadeOut 1s;
+  /* animation: fadeOut 1s; */
 }
 
 .mainheading h1.sitetitle:hover {
-  animation: fadeIn 1s forwards;
+  font-size: 2.7rem;
+  color: #c7c8f4;
+  transition: all 1s ease;
+}
+
+.mainheading h1.sitetitle:not(:hover) {
+  color: #ee6d38;
+  opacity: 0.7;
+  transition: all 1s ease;
 }
 
 @keyframes fadeIn {
@@ -376,14 +384,12 @@ span.post-read-more a:hover {
   }
   100% {
     color: #c7c8f4;
-    font-size: 50px;
   }
 }
 
 @keyframes fadeOut {
   0% {
     color: #c7c8f4;
-    font-size: 50px;
   }
   100% {
     ocolor: #ee6d38;
@@ -623,9 +629,31 @@ blockquote {
   padding: 5px 10px;
 }
 
+.category a {
+  background: rgb(249, 139, 125, 0.15);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.hashtag a {
+  background: rgb(199, 200, 244, 0.15);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
 .tags a:hover {
   background: #f98b7d;
   text-decoration: none;
+}
+
+.category a:hover {
+  background: #f98b7d;
+}
+
+.hashtag a:hover {
+  background: #c7c8f4;
 }
 
 .margtop3rem {
