@@ -8,13 +8,26 @@ permalink: "/tags.html"
   <div class="section-title col-md-12">
     <h2><span class="text-capitalize"><i class="fas fa-tags"></i> Tags</span></h2>
   </div>
-  <div class="tags">
-    <div class="d-md-flex">
-      <div class="pl-3 pt-3 align-self-center text-center">
-        {% for tag in site.tags %}
-        <a class="smoothscroll mt-1 mb-1" href="{{site.baseurl}}/tags#{{ tag[0] }}">{{ tag[0] }}</a>
-        {% endfor %}
-      </div>
+  <!-- Reduce Height Responsively -->
+  <style>
+  </style>
+  <div class="col-md-12">
+    <div class="d-flex flex-wrap tags">
+      {% assign tags_list = site.tags %}
+      {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+      <a class="smoothscroll m-1" href="{{site.baseurl}}/tags#{{ tag | url_escape | strip | replace: ' ', '-' }}">
+        {{ tag | camelcase }} ({{ site.tags[tag].size }})
+      </a>
+      {% endfor %}
+      {% else %}
+      {% for tag in tags_list %}
+      <a class="smoothscroll m-1" href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}">
+        #{{ tag[0] | camelcase }} ({{ tag[1].size }})
+      </a>
+      {% endfor %}
+      {% endif %}
+      {% assign tags_list = nil %}
     </div>
   </div>
   {% for tag in site.tags %}
