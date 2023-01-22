@@ -7,7 +7,7 @@ logo: "assets/images/darkmodeparrot.gif"
 favicon: "aassets/images/darkmodeparrot.gif"
 baseurl: ""
 google_tagmanager: "GTM-W4DFQ56"
-disqus: "isthis"
+# disqus: "isthis" - 댓글 기능 giscus로 변경
 include: ["_pages"]
 permalink: /:title/
 

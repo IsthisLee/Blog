@@ -41,6 +41,12 @@
 
     <script src="/assets/js/jquery.min.js"></script>
 
+    <!-- giscus comment -->
+    <script src="https://giscus.app/client.js" data-repo="IsthisLee/Blog" data-repo-id="R_kgDOIx_7XQ"
+        data-category="Blog Comments DB" data-category-id="DIC_kwDOIx_7Xc4CTvnB" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="ko"
+        crossorigin="anonymous" async>
+        </script>
 </head>
 
 
@@ -271,7 +277,7 @@
                 <div class="toc mt-4 mb-4 lead">
                     <h3 class="font-weight-bold">Summary</h3>
                     <ul>
-  <li><a href="#만드는-방법">만드는 방법</a></li>
+  <li><a href="#gitbook-생성-방법">GitBook 생성 방법</a></li>
   <li><a href="#gitbook-cli로-생성하기">GitBook CLI로 생성하기</a>
     <ul>
       <li><a href="#생성">생성</a></li>
@@ -285,15 +291,15 @@
                 <!-- End Toc -->
                 <p>GitBook CLI를 통하여 GitBook page를 만들어보자</p>
 
-<h3 id="만드는-방법">만드는 방법</h3>
+<h3 id="gitbook-생성-방법">GitBook 생성 방법</h3>
 
-<p>GitBook Page를 만드는 방법에는 두 가지가 있다.</p>
+<p>GitBook Page를 생성하는 방법에는 두 가지가 있다.</p>
 
 <ol>
   <li>
-    <p>GitBook 공식 홈페이지</p>
+    <p><a href="https://www.gitbook.com/">GitBook 공식 홈페이지</a></p>
 
-    <p>공식 홈페이지에 들어가면 GUI를 통해 만들 수 있다. 생성 방법은 어렵지 않고 시키는 대로 하면 된다.(따라서 해당 방법은 생략)</p>
+    <p>위의 공식 홈페이지에 들어가면 GUI를 통해 만들 수 있다. 생성 방법은 어렵지 않고 시키는 대로 하면 된다.(따라서 해당 방법은 생략)</p>
   </li>
   <li>
     <p>GitBook CLI 사용</p>
@@ -304,7 +310,7 @@
 
 <p>하지만 주의할 사항..<br />
 현재 GitBook CLI의 경우, 2017년이 마지막 업데이트로 더 이상 운영을 하지 않는 것으로 보인다. 또한, 디자인이나 SEO가 공식 홈페이지를 통해 만든 것이 깔끔하다.<br />
-따라서, 돈을 쓰고싶진 않지만, 무료 플랜에 없는 기능을 붙이고 싶은 경우가 아니라면 공식 홈페이지를 통해 생성하는 것이 더 좋을 것으로 보인다.</p>
+따라서 돈을 쓰고싶지 않고 무료 플랜에 없는 기능을 붙이고 싶은 경우가 아니면, 공식 홈페이지를 통해 생성하는 것이 더 좋을 것으로 보인다.</p>
 
 <h3 id="gitbook-cli로-생성하기">GitBook CLI로 생성하기</h3>
 
@@ -340,10 +346,10 @@ TypeError: cb.apply is not a function
 </pre></td></tr></tbody></table></code></pre></div>        </div>
 
         <p>gitbook-cli에서 사용한 패키지에 문제가 있어서 그렇다.<br />
- 다음과 같이 해당 패키지를 에러 안나는 버전으로 업데이트 해주자.</p>
+아래와 같이 해당 패키지를 에러 안나는 버전으로 업데이트 해주자.</p>
       </li>
       <li>
-        <p>node 설치 폴더로 이동한다.</p>
+        <p>해당 패키지 설치 폴더로 이동한다.</p>
 
         <p><code class="language-plaintext highlighter-rouge">cd ~/.nvm/versions/node/v12.22.12/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/</code></p>
       </li>
@@ -365,7 +371,9 @@ TypeError: cb.apply is not a function
   <li>
     <p>커스텀하기</p>
 
-    <p>커스텀을 위해서는 플러그인을 설치해주면 된다. 예를 들어 DISQUS라는 써드파티 프로그램을 통해 댓글 기능을 붙이려면, root 폴더에 book.json 파일을 생성하고 다음과 같이 설정해주면 된다. pluginsConfig의 disqus 값은 disqus에 들어가서 본인 주소를 생성하고 해당 값을 넣어주면 된다.</p>
+    <p>커스텀을 위해서는 플러그인을 설치해주면 된다.<br />
+예를 들어, DISQUS라는 써드파티 프로그램을 통해 댓글 기능을 붙이려면, root 폴더에 book.json 파일을 생성하고 다음과 같이 설정해주면 된다.<br />
+pluginsConfig의 disqus 값은 disqus에 들어가서 본인 주소를 생성하고 해당 값을 넣어주자.</p>
 
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -417,8 +425,8 @@ TypeError: cb.apply is not a function
       <li>
         <p>커맨드 설명</p>
 
-        <p>git Untracked 상태의 파일들을 삭제한다.
-(-x 옵션으로 .gitignore 파일에 포함된 파일도 삭제한다.)
+        <p>git Untracked 상태의 파일들을 삭제한다.<br />
+(-x 옵션으로 .gitignore 파일에 포함된 파일도 삭제한다.)<br />
 (-d 옵션 추가 안 했으므로 디렉터리는 제거되지 않는다.)</p>
       </li>
     </ul>
@@ -436,6 +444,18 @@ TypeError: cb.apply is not a function
   <li>별도 폴더 생성해서 마크다운 페이지 생성한다.</li>
   <li>해당 페이지에 글 작성 및 목차를 반영한다.</li>
 </ol>
+
+<p>만약, github의 README와 gitbook의 README를 다르게 설정하고 싶다면, book.json에 다음 설정을 추가하자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>"structure": {
+    "readme": "README.md"
+  }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>gitbook에 표시될 README를 지정할 수 있다.</p>
 
 <blockquote>
   <p>참고 자료</p>
@@ -515,11 +535,11 @@ TypeError: cb.apply is not a function
 
 <div class="container">
     <div id="comments" class="row justify-content-center mb-5">
-        <div class="col-md-8">
-            <section class="disqus">
+        <div class="col-md-8 giscus">
+            <!-- <section class="disqus">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_shortname = 'isthis'; 
+        var disqus_shortname = ''; 
         var disqus_developer = 0;
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -530,7 +550,7 @@ TypeError: cb.apply is not a function
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
-
+ -->
         </div>
     </div>
 </div>
@@ -638,7 +658,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 
     
-    <script id="dsq-count-scr" src="//isthis.disqus.com/count.js"></script>
+    <script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
     
 
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
