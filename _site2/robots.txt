@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://isthislee.com/sitemap.xml
