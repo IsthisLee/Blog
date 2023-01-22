@@ -8,23 +8,27 @@
 
     <link rel="icon" href="/assets/images/darkmodeparrot.gif">
 
-    <title>About 이건희 | isthisLee's blog</title>
+    <title>[GitBook] CLI로 GitBook 생성하기 | isthisLee's blog</title>
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About 이건희 | isthisLee’s tech blog(web 개발 블로그, javascript)</title>
+<title>[GitBook] CLI로 GitBook 생성하기 | isthisLee’s tech blog(web 개발 블로그, javascript)</title>
 <meta name="generator" content="Jekyll v4.3.1" />
-<meta property="og:title" content="About 이건희" />
+<meta property="og:title" content="[GitBook] CLI로 GitBook 생성하기" />
+<meta name="author" content="isthis" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다." />
-<meta property="og:description" content="isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다." />
-<link rel="canonical" href="http://localhost:4000/about" />
-<meta property="og:url" content="http://localhost:4000/about" />
+<meta name="description" content="TypeScript(NestJS)에서 중첩 객체 유효성 검사하기" />
+<meta property="og:description" content="TypeScript(NestJS)에서 중첩 객체 유효성 검사하기" />
+<link rel="canonical" href="http://localhost:4000/make-gitbook/" />
+<meta property="og:url" content="http://localhost:4000/make-gitbook/" />
 <meta property="og:site_name" content="isthisLee’s tech blog(web 개발 블로그, javascript)" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About 이건희" />
+<meta property="og:image" content="http://localhost:4000/assets/images/GitBook.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-21T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/GitBook.png" />
+<meta property="twitter:title" content="[GitBook] CLI로 GitBook 생성하기" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다.","headline":"About 이건희","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/darkmodeparrot.gif"}},"url":"http://localhost:4000/about"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"isthis"},"dateModified":"2023-01-21T00:00:00+09:00","datePublished":"2023-01-21T00:00:00+09:00","description":"TypeScript(NestJS)에서 중첩 객체 유효성 검사하기","headline":"[GitBook] CLI로 GitBook 생성하기","image":"http://localhost:4000/assets/images/GitBook.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/make-gitbook/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/darkmodeparrot.gif"},"name":"isthis"},"url":"http://localhost:4000/make-gitbook/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -49,7 +53,7 @@
 
 
 
-<body class="layout-page">
+<body class="layout-post">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4DFQ56" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -110,9 +114,9 @@
                     </li>
 
                     
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         
-                        <a class="nav-link" href="/about"><i class="fas fa-user"></i> About Me</a>
+                        <a class="nav-link" href="/about"><i class="fas fa-user"></i> About</a>
                     </li>
 
                     
@@ -179,74 +183,358 @@
             <!-- Content
 ================================================== -->
             <div class="main-content">
-                <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+                <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
 
-<!-- End Adsense -->
-<section>
-    <div class="section-title">
-        <h2><span>About 이건희</span></h2>
-    </div>
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=[GitBook] CLI로 GitBook 생성하기&url=http://localhost:4000/make-gitbook/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
 
-    <div class="article-post">
-        <div class="row justify-content-between">
-<div class="col-md-8 pr-5">
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/make-gitbook/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
 
-<p>안녕하세요 <br />
-초보 백엔드 개발자 이건희입니다.</p>
-<p class="mb-5"><img class="shadow-lg" src="/assets/images/darkmodeparrot.gif" alt="jekyll template mediumish" /></p>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/make-gitbook/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
 
-<h4>소개</h4>
-<p>기본이 잡혀있는 개발자가 되기 위해 노력하고 있습니다.</p>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="sticky-top sticky-top-80">
-<h5>My Site</h5>
-
-<p>깃헙 등의 사이트입니다.</p>
-
-<a target="_blank" href="https://github.com/IsthisLee" class="btn btn-danger">Github <i class="fab fa-github"></i></a> <a target="_blank" href="https://velog.io/@isthis" class="btn btn-warning">Velog <i class="fa fa-paperclip"></i></a>
-
-</div>
-</div>
-</div>
-
-<!-- <div class="row justify-content-between">
-<div class="col-md-8 pr-5">
-
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
-
-<p class="mb-5"><img class="shadow-lg" src="/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
-
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
-
-<h4>Questions or bug reports?</h4>
-
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="sticky-top sticky-top-80">
-<h5>Buy me a coffee</h5>
-
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
-
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
-
-</div>
-</div>
-</div> -->
-
-    </div>
-
+    </ul>
     
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
 
-    <div id="comments" class="row mb-5">
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-auto text-center text-md-left mb-4 mb-md-0">
+                        
+                        <a href="/about"><img class="author-thumb"
+                                src="https://www.gravatar.com/avatar/b3007b17990548abf8b6d7e0dd7d5294?s=250&d=mm&r=x"
+                                alt="이건희"></a>
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a class="link-dark" href="/about">이건희</a><a target="_blank" href="https://github.com/IsthisLee" class="btn follow">Follow</a>
+                        <p><span class="author-description">초보 개발자입니다. 이슈 및 공부한 내용을 정리하고 있습니다. 피드백 환영합니다 :)</span></p>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">[GitBook] CLI로 GitBook 생성하기</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/GitBook.png" alt="[GitBook] CLI로 GitBook 생성하기">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                
+                <div class="toc mt-4 mb-4 lead">
+                    <h3 class="font-weight-bold">Summary</h3>
+                    <ul>
+  <li><a href="#gitbook-생성-방법">GitBook 생성 방법</a></li>
+  <li><a href="#gitbook-cli로-생성하기">GitBook CLI로 생성하기</a>
+    <ul>
+      <li><a href="#생성">생성</a></li>
+      <li><a href="#배포-방법">배포 방법</a></li>
+      <li><a href="#글-작성-방법">글 작성 방법</a></li>
+    </ul>
+  </li>
+</ul>
+                </div>
+                
+                <!-- End Toc -->
+                <p>GitBook CLI를 통하여 GitBook page를 만들어보자</p>
+
+<h3 id="gitbook-생성-방법">GitBook 생성 방법</h3>
+
+<p>GitBook Page를 생성하는 방법에는 두 가지가 있다.</p>
+
+<ol>
+  <li>
+    <p><a href="https://www.gitbook.com/">GitBook 공식 홈페이지</a></p>
+
+    <p>위의 공식 홈페이지에 들어가면 GUI를 통해 만들 수 있다. 생성 방법은 어렵지 않고 시키는 대로 하면 된다.(따라서 해당 방법은 생략)</p>
+  </li>
+  <li>
+    <p>GitBook CLI 사용</p>
+
+    <p>공식 홈페이지를 통해 생성할 경우, 유료 플랜을 사용하지 않으면 여러가지 기능 제한이 있다. 디자인 커스텀이나 댓글 등의 기능이 제한되어 있다. 하지만, GitBook CLI를 통해 생성한다면 다양한 커스텀이 가능하다.</p>
+  </li>
+</ol>
+
+<p>하지만 주의할 사항..<br />
+현재 GitBook CLI의 경우, 2017년이 마지막 업데이트로 더 이상 운영을 하지 않는 것으로 보인다. 또한, 디자인이나 SEO가 공식 홈페이지를 통해 만든 것이 깔끔하다.<br />
+따라서 돈을 쓰고싶지 않고 무료 플랜에 없는 기능을 붙이고 싶은 경우가 아니면, 공식 홈페이지를 통해 생성하는 것이 더 좋을 것으로 보인다.</p>
+
+<h3 id="gitbook-cli로-생성하기">GitBook CLI로 생성하기</h3>
+
+<h4 id="생성">생성</h4>
+
+<ol>
+  <li>
+    <p>노드 버전을 12 버전으로 설정</p>
+
+    <p>앞에서 말했듯이 gitbook-cli는 오랫동안 업데이트가 안 되었다. 따라서 노드 14 초과 버전은 에러가 발생하므로 14버전으로 변경해주자.(mac m1은 12버전) nvm 또는 g를 사용하여 버전 변경이 가능하다. nvm의 경우 <code class="language-plaintext highlighter-rouge">nvm use 14</code> 커맨드로 노드 버전을 낮춰주자.</p>
+  </li>
+  <li>
+    <p>gitbook-cli 설치</p>
+
+    <p><code class="language-plaintext highlighter-rouge">npm install gitbook-cli -g</code> 커맨드 입력</p>
+  </li>
+  <li>
+    <p>초기 설정 + 에러 해결</p>
+
+    <ol>
+      <li>
+        <p>새로운 폴더를 만들고, 해당 폴더에서 <code class="language-plaintext highlighter-rouge">gitbook init</code> 커맨드 입력</p>
+      </li>
+      <li>
+        <p>아마 다음과 같은 에러와 마주쳤을 것이다.</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>if (cb) cb.apply(this, arguments)
+
+TypeError: cb.apply is not a function
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+
+        <p>gitbook-cli에서 사용한 패키지에 문제가 있어서 그렇다.<br />
+아래와 같이 해당 패키지를 에러 안나는 버전으로 업데이트 해주자.</p>
+      </li>
+      <li>
+        <p>해당 패키지 설치 폴더로 이동한다.</p>
+
+        <p><code class="language-plaintext highlighter-rouge">cd ~/.nvm/versions/node/v12.22.12/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/</code></p>
+      </li>
+      <li>
+        <p>문제되는 패키지 업그레이드</p>
+
+        <p><code class="language-plaintext highlighter-rouge">npm i graceful-fs@4.2.0</code></p>
+      </li>
+      <li>
+        <p>기존 폴더로 돌아가서 다시 <code class="language-plaintext highlighter-rouge">gitbook init</code>을 입력한다.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>서버 실행</p>
+
+    <p><code class="language-plaintext highlighter-rouge">gitbook serve</code>를 입력하면 <code class="language-plaintext highlighter-rouge">localhost:4000</code>으로 접속이 가능하다.</p>
+  </li>
+  <li>
+    <p>커스텀하기</p>
+
+    <p>커스텀을 위해서는 플러그인을 설치해주면 된다.<br />
+예를 들어, DISQUS라는 써드파티 프로그램을 통해 댓글 기능을 붙이려면, root 폴더에 book.json 파일을 생성하고 다음과 같이 설정해주면 된다.<br />
+pluginsConfig의 disqus 값은 disqus에 들어가서 본인 주소를 생성하고 해당 값을 넣어주자.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>{
+ "plugins": [
+   "disqus",
+ ],
+ "pluginsConfig": {
+   "disqus": {
+     "shortName": "[MyName]"
+   },
+ }
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>커스텀 적용</p>
+
+    <p><code class="language-plaintext highlighter-rouge">gitbook install</code> 커맨드를 입력하여 플러그인을 받아주면 적용 완료.</p>
+  </li>
+</ol>
+
+<h4 id="배포-방법">배포 방법</h4>
+
+<ol>
+  <li>gitbook install</li>
+  <li>gitbook build ./ —log=debug —debug</li>
+  <li>
+    <p>cp -r ./_book/gitbook .</p>
+
+    <ul>
+      <li>
+        <p>커맨드 설명</p>
+
+        <p>폴더들을 제귀적으로 복사(깊은 복사)해준다. 파일 소유자와 퍼미션까지 동일하려면 -a 옵션을 붙여주자.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>git clean -fx ./_book</p>
+
+    <ul>
+      <li>
+        <p>커맨드 설명</p>
+
+        <p>git Untracked 상태의 파일들을 삭제한다.<br />
+(-x 옵션으로 .gitignore 파일에 포함된 파일도 삭제한다.)<br />
+(-d 옵션 추가 안 했으므로 디렉터리는 제거되지 않는다.)</p>
+      </li>
+    </ul>
+  </li>
+  <li>git add .</li>
+  <li>git commit -m “commit msg”</li>
+  <li>git push origin gh-pages</li>
+</ol>
+
+<h4 id="글-작성-방법">글 작성 방법</h4>
+
+<ol>
+  <li>초기 설정 시 README.md, SUMMARY.md 파일 생성된다.</li>
+  <li>SUMMARY.md에 페이지 목차를 설정할 수 있다.</li>
+  <li>별도 폴더 생성해서 마크다운 페이지 생성한다.</li>
+  <li>해당 페이지에 글 작성 및 목차를 반영한다.</li>
+</ol>
+
+<p>만약, github의 README와 gitbook의 README를 다르게 설정하고 싶다면, book.json에 다음 설정을 추가하자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>"structure": {
+    "readme": "README.md"
+  }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>gitbook에 표시될 README를 지정할 수 있다.</p>
+
+<blockquote>
+  <p>참고 자료</p>
+
+  <p><a href="https://tinydew4.gitbooks.io/gitbook/content/ko/">gitbook manual</a><br />
+<a href="https://velog.io/@soopsaram/gitbook">soopsaram</a><br />
+<a href="https://vroomfan.tistory.com/50">내실내놀 개발자</a><br />
+<a href="https://jojoldu.tistory.com/598">기억보단 기록을</a></p>
+</blockquote>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+                <small>
+                    <span class="post-date"><time class="post-date" datetime=" 2023-01-21">21 Jan 2023</time></span>
+                    
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <!-- Create categorie tags(tag ui) without overlapping top and bottom -->
+
+            <div>
+                <div class="after-post-cats mb-4">
+                    <div class="d-flex flex-wrap tags category">
+                        
+                        
+                        <a class="smoothscroll m-1" href="/categories#blog">blog</a>
+                        
+                        <a class="smoothscroll m-1" href="/categories#개발">개발</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div>
+                <div class="after-post-cats mb-4">
+                    <div class="d-flex flex-wrap tags hashtag">
+                        
+                        
+                        <a class="smoothscroll m-1" href="/tags#blog">#blog</a>
+                        
+                        <a class="smoothscroll m-1" href="/tags#gitbook">#gitbook</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                
+                <a class="prev d-block col-md-6" href="/validate-nested-dto/"> &laquo;
+                    [NestJS] TypeScript(NestJS)에서 중첩 객체 유효성 검사하기</a>
+                
+                
+                <div class="clearfix"></div>
+            </div>
+            <!-- End Prev/Next -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
         <div class="col-md-8 giscus">
             <!-- <section class="disqus">
     <div id="disqus_thread"></div>
@@ -265,9 +553,22 @@
  -->
         </div>
     </div>
+</div>
 
-    
-</section>
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+<script>
+    $(window).on("load resize ", function () {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({ 'padding-right': scrollWidth });
+    }).resize();
+</script>
             </div>
 
             
@@ -356,6 +657,8 @@
 
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 
+    
+    <script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
     
 
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>

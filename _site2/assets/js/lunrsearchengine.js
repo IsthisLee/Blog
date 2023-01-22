@@ -7,7 +7,7 @@ var documents = [{
     }, {
     "id": 1,
     "url": "http://localhost:4000/about",
-    "title": "About 이건희",
+    "title": "<i class="fas fa-user"></i> About 이건희",
     "body": "안녕하세요 초보 백엔드 개발자 이건희입니다.  소개: 기본이 잡혀있는 개발자가 되기 위해 노력하고 있습니다. My Site깃헙 등의 사이트입니다. Github Velog "
     }, {
     "id": 2,
