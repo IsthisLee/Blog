@@ -4,7 +4,7 @@ title: "[Yarn] yarn warning - No license field 해결"
 author: isthis
 categories: [개발, issue, package-manager]
 tags: [yarn, issue, package-manager]
-image: assets/images/yarn-warning-no-license.png
+image: assets/images/logos/yarn-logo.png
 description: "yarn warning - No license field 해결"
 toc: true
 featured: false

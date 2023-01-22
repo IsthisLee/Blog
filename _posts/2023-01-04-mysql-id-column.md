@@ -4,7 +4,7 @@ title: "[MySQL] MySQL id컬럼의 data type (INT vs BIGINT)"
 author: isthis
 categories: [개발, issue, db]
 tags: [mysql, db]
-# image: assets/images/default.jpg
+image: assets/images/logos/mysql-logo.png
 description: "MySQL id컬럼의 data type에 대하여"
 # beforetoc: "MySQL id컬럼의 data type에 대하여"
 toc: true

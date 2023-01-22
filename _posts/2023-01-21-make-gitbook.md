@@ -4,7 +4,7 @@ title: "[GitBook] CLI로 GitBook 생성하기"
 author: isthis
 categories: [개발, blog]
 tags: [blog, gitbook]
-image: assets/images/GitBook.png
+image: assets/images/logos/GitBook-logo.png
 description: "GitBook CLI를 통하여 GitBook page 만들기"
 toc: true
 featured: true

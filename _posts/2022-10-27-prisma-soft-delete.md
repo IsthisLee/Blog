@@ -4,7 +4,7 @@ title: "[Prisma] prisma soft delete 적용하기"
 author: isthis
 categories: [개발, issue, backend, db]
 tags: [orm, prisma, issue]
-# image: assets/images/13.jpg
+image: assets/images/logos/prisma-logo.png
 description: "prisma soft delete 적용하기"
 # beforetoc: "MySQL id컬럼의 data type에 대하여"
 toc: true

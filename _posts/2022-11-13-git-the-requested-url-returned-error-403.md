@@ -4,7 +4,7 @@ title: "[GIT] git the requested URL returend error : 403 해결"
 author: isthis
 categories: [개발, issue, git]
 tags: [git, issue]
-# image: assets/images/13.jpg
+image: assets/images/logos/git-logo.png
 description: "git the requested URL returend error : 403 해결하기"
 # beforetoc: "MySQL id컬럼의 data type에 대하여"
 toc: true
