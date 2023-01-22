@@ -5,7 +5,7 @@ author: isthis
 categories: [개발, blog]
 tags: [blog, gitbook]
 image: assets/images/GitBook.png
-description: "TypeScript(NestJS)에서 중첩 객체 유효성 검사하기"
+description: "GitBook CLI를 통하여 GitBook page 만들기"
 toc: true
 featured: true
 hidden: false
