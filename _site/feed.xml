@@ -5,9 +5,189 @@
     <description>isthisLee(이건희)의 개발(develop) 블로그(blog)입니다. 주로 WEB 기술에 관련된 이슈(issue)와 공부(study, til)한 내용을 정리하고 있습니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Jan 2023 05:28:11 +0900</pubDate>
-    <lastBuildDate>Wed, 18 Jan 2023 05:28:11 +0900</lastBuildDate>
+    <pubDate>Sun, 22 Jan 2023 21:42:00 +0900</pubDate>
+    <lastBuildDate>Sun, 22 Jan 2023 21:42:00 +0900</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>[GitBook] CLI로 GitBook 생성하기</title>
+        <description>&lt;p&gt;GitBook CLI를 통하여 GitBook page를 만들어보자&lt;/p&gt;
+
+&lt;h3 id=&quot;만드는-방법&quot;&gt;만드는 방법&lt;/h3&gt;
+
+&lt;p&gt;GitBook Page를 만드는 방법에는 두 가지가 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;GitBook 공식 홈페이지&lt;/p&gt;
+
+    &lt;p&gt;공식 홈페이지에 들어가면 GUI를 통해 만들 수 있다. 생성 방법은 어렵지 않고 시키는 대로 하면 된다.(따라서 해당 방법은 생략)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;GitBook CLI 사용&lt;/p&gt;
+
+    &lt;p&gt;공식 홈페이지를 통해 생성할 경우, 유료 플랜을 사용하지 않으면 여러가지 기능 제한이 있다. 디자인 커스텀이나 댓글 등의 기능이 제한되어 있다. 하지만, GitBook CLI를 통해 생성한다면 다양한 커스텀이 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;하지만 주의할 사항..&lt;br /&gt;
+현재 GitBook CLI의 경우, 2017년이 마지막 업데이트로 더 이상 운영을 하지 않는 것으로 보인다. 또한, 디자인이나 SEO가 공식 홈페이지를 통해 만든 것이 깔끔하다.&lt;br /&gt;
+따라서, 돈을 쓰고싶진 않지만, 무료 플랜에 없는 기능을 붙이고 싶은 경우가 아니라면 공식 홈페이지를 통해 생성하는 것이 더 좋을 것으로 보인다.&lt;/p&gt;
+
+&lt;h3 id=&quot;gitbook-cli로-생성하기&quot;&gt;GitBook CLI로 생성하기&lt;/h3&gt;
+
+&lt;h4 id=&quot;생성&quot;&gt;생성&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;노드 버전을 12 버전으로 설정&lt;/p&gt;
+
+    &lt;p&gt;앞에서 말했듯이 gitbook-cli는 오랫동안 업데이트가 안 되었다. 따라서 노드 14 초과 버전은 에러가 발생하므로 14버전으로 변경해주자.(mac m1은 12버전) nvm 또는 g를 사용하여 버전 변경이 가능하다. nvm의 경우 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm use 14&lt;/code&gt; 커맨드로 노드 버전을 낮춰주자.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;gitbook-cli 설치&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install gitbook-cli -g&lt;/code&gt; 커맨드 입력&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;초기 설정 + 에러 해결&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;새로운 폴더를 만들고, 해당 폴더에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gitbook init&lt;/code&gt; 커맨드 입력&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;아마 다음과 같은 에러와 마주쳤을 것이다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;if (cb) cb.apply(this, arguments)
+
+TypeError: cb.apply is not a function
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+
+        &lt;p&gt;gitbook-cli에서 사용한 패키지에 문제가 있어서 그렇다.&lt;br /&gt;
+ 다음과 같이 해당 패키지를 에러 안나는 버전으로 업데이트 해주자.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;node 설치 폴더로 이동한다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ~/.nvm/versions/node/v12.22.12/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;문제되는 패키지 업그레이드&lt;/p&gt;
+
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm i graceful-fs@4.2.0&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;기존 폴더로 돌아가서 다시 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gitbook init&lt;/code&gt;을 입력한다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;서버 실행&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gitbook serve&lt;/code&gt;를 입력하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt;으로 접속이 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;커스텀하기&lt;/p&gt;
+
+    &lt;p&gt;커스텀을 위해서는 플러그인을 설치해주면 된다. 예를 들어 DISQUS라는 써드파티 프로그램을 통해 댓글 기능을 붙이려면, root 폴더에 book.json 파일을 생성하고 다음과 같이 설정해주면 된다. pluginsConfig의 disqus 값은 disqus에 들어가서 본인 주소를 생성하고 해당 값을 넣어주면 된다.&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;{
+ &quot;plugins&quot;: [
+   &quot;disqus&quot;,
+ ],
+ &quot;pluginsConfig&quot;: {
+   &quot;disqus&quot;: {
+     &quot;shortName&quot;: &quot;[MyName]&quot;
+   },
+ }
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;커스텀 적용&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gitbook install&lt;/code&gt; 커맨드를 입력하여 플러그인을 받아주면 적용 완료.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;배포-방법&quot;&gt;배포 방법&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;gitbook install&lt;/li&gt;
+  &lt;li&gt;gitbook build ./ —log=debug —debug&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;cp -r ./_book/gitbook .&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;커맨드 설명&lt;/p&gt;
+
+        &lt;p&gt;폴더들을 제귀적으로 복사(깊은 복사)해준다. 파일 소유자와 퍼미션까지 동일하려면 -a 옵션을 붙여주자.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;git clean -fx ./_book&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;커맨드 설명&lt;/p&gt;
+
+        &lt;p&gt;git Untracked 상태의 파일들을 삭제한다.
+(-x 옵션으로 .gitignore 파일에 포함된 파일도 삭제한다.)
+(-d 옵션 추가 안 했으므로 디렉터리는 제거되지 않는다.)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;git add .&lt;/li&gt;
+  &lt;li&gt;git commit -m “commit msg”&lt;/li&gt;
+  &lt;li&gt;git push origin gh-pages&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;글-작성-방법&quot;&gt;글 작성 방법&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;초기 설정 시 README.md, SUMMARY.md 파일 생성된다.&lt;/li&gt;
+  &lt;li&gt;SUMMARY.md에 페이지 목차를 설정할 수 있다.&lt;/li&gt;
+  &lt;li&gt;별도 폴더 생성해서 마크다운 페이지 생성한다.&lt;/li&gt;
+  &lt;li&gt;해당 페이지에 글 작성 및 목차를 반영한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;참고 자료&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://tinydew4.gitbooks.io/gitbook/content/ko/&quot;&gt;gitbook manual&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://velog.io/@soopsaram/gitbook&quot;&gt;soopsaram&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://vroomfan.tistory.com/50&quot;&gt;내실내놀 개발자&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://jojoldu.tistory.com/598&quot;&gt;기억보단 기록을&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sat, 21 Jan 2023 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/make-gitbook/</link>
+        <guid isPermaLink="true">http://localhost:4000/make-gitbook/</guid>
+        
+        <category>blog</category>
+        
+        <category>gitbook</category>
+        
+        
+        <category>개발</category>
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>[NestJS] TypeScript(NestJS)에서 중첩 객체 유효성 검사하기</title>

@@ -8,7 +8,7 @@ tags: [mysql, db]
 description: "MySQL id컬럼의 data type에 대하여"
 # beforetoc: "MySQL id컬럼의 data type에 대하여"
 toc: true
-featured: true
+featured: false
 hidden: false
 # rating: 3
 ---

@@ -21,6 +21,10 @@
 <lastmod>2023-01-08T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/make-gitbook/</loc>
+<lastmod>2023-01-21T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -52,5 +56,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/category/package-manager/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/blog/</loc>
 </url>
 </urlset>
